@@ -61,7 +61,7 @@ class RegisterController extends Controller
 
 
     public function dashboardIndex(){
-        return view('dashboard.dashboard-index');
+        return view('components.user-index');
     }
     public function superAdmin(){
         return view('dashboard.superadmin-dashboard-index');
