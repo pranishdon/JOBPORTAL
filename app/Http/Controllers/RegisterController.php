@@ -49,7 +49,7 @@ class RegisterController extends Controller
         );
             if (Auth::attempt($credentials, $remember)) {
             if(Auth::check() && Auth::user()->role == 1){
-                return redirect()->route('admin');
+                return redirect()->route('userLogin');
             }else if(Auth::check() && Auth::user()->role == 2){
                 return redirect()->route('superAdminDashhboard');
             }
@@ -60,9 +60,7 @@ class RegisterController extends Controller
         }
 
 
-    public function dashboardIndex(){
-        return view('components.user-index');
-    }
+
     public function superAdmin(){
         return view('dashboard.superadmin-dashboard-index');
     }

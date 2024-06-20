@@ -10,3 +10,6 @@ import '../userassets/js/lazyload.17.6.0.min.js'
 import '../userassets/js/slick.min.js'
 import '../userassets/js/lightbox.min.js'
 import '../userassets/js/custom.js'
+
+
+

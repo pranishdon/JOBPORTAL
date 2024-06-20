@@ -23,9 +23,9 @@
                 <form method="POST" action="{{ url('password/reset')}}">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
-                <div class="form-group">
+                    <div class="form-group d-none">
                     <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email')}}" tabindex="1" required autofocus>
+                    <input id="email" type="email" type="hidden" class="form-control " name="email" value="{{ $email}}" tabindex="1" required autofocus>
                   </div>
                   <div class="form-group">
                     <label for="password">New Password</label>

@@ -16,10 +16,8 @@ class User
      */
     public function handle(Request $request, Closure $next): Response
     {
-
-
         if (Auth::check() && Auth::user()->role == 1) {
-            return redirect()->route('admin');
+            return redirect()->route('userLogin');
         }else if(Auth::check() && Auth::user()->role == 2){
             return redirect()->route('superAdminDashhboard');
         }
